@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "ef414e3c-dc8b-44a5-b68b-576f6cabb2a9",
+		"name": "05_eventos_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34472664"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLevento}}",
+					"host": [
+						"{{URLevento}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLevento}}/page",
+					"host": [
+						"{{URLevento}}"
+					],
+					"path": [
+						"page"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Fiesta despedida\",\r\n    \"fecha\": \"2024-11-24\",\r\n    \"ubicacion\": \"medellin\",\r\n    \"capacidad\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLevento}}",
+					"host": [
+						"{{URLevento}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLevento}}/{id}",
+					"host": [
+						"{{URLevento}}"
+					],
+					"path": [
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Fiesta despedida\",\r\n        \"fecha\": \"2024-11-30\",\r\n        \"ubicacion\": \"medellin\",\r\n        \"capacidad\": 50\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLevento}}/a6bc8f56-cb97-4b2b-9b6d-a34feac61262",
+					"host": [
+						"{{URLevento}}"
+					],
+					"path": [
+						"a6bc8f56-cb97-4b2b-9b6d-a34feac61262"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Fiesta despedida\",\r\n        \"fecha\": \"2024-11-30\",\r\n        \"ubicacion\": \"medellin\",\r\n        \"capacidad\": 50\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLevento}}/cb88fa18-1850-44cd-bbb4-47517d957e63",
+					"host": [
+						"{{URLevento}}"
+					],
+					"path": [
+						"cb88fa18-1850-44cd-bbb4-47517d957e63"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "URLevento",
+			"value": "http://localhost:8080/api/v1/evento"
+		}
+	]
+}

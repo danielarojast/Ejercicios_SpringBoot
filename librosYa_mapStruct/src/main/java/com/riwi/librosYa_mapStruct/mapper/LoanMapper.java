@@ -3,15 +3,13 @@ package com.riwi.librosYa_mapStruct.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
 
-import com.riwi.librosYa_mapStruct.dto.GetLoan;
-import com.riwi.librosYa_mapStruct.dto.GetUser;
-import com.riwi.librosYa_mapStruct.entity.Loan;
-import com.riwi.librosYa_mapStruct.entity.User;
+import com.riwi.librosYa_mapStruct.api.dto.response.LoanResp;
+import com.riwi.librosYa_mapStruct.domain.entity.Loan;
 
 import java.util.List;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface LoanMapper {
-    GetLoan loanToGetLoan(Loan loan);
-    List<GetLoan> toGetLoanList(List<Loan> loanList);
+    LoanResp loanToGetLoan(Loan loan);
+    List<LoanResp> toGetLoanList(List<Loan> loanList);
 }

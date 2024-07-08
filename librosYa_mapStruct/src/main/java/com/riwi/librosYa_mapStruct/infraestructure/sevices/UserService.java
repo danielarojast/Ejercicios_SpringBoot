@@ -8,6 +8,11 @@ import com.riwi.librosYa_mapStruct.infraestructure.abstract_service.IUserService
 
 public class UserService implements IUserService{
 
+    @Autowired
+    private final UserRepository userRepository;
+    @Autowired
+    private final UserMapper userMapper;
+    
     @Override
     public UserResp create(UserRequest rq) {
         User user = this.userMapper.requestToEntity(rq);
